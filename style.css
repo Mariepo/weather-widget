@@ -93,6 +93,13 @@ button {
     font-weight: 400;
     margin-top: -10px;
 }
+.error {
+    display: none;
+    text-align: left;
+    color: #9b0000;
+    font-weight: 700;
+    margin-top: 0.8rem;
+}
 
 /* Card - details */
 #weather-details {
