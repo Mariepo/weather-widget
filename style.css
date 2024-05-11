@@ -28,12 +28,12 @@ button {
     cursor: pointer;
 }
 
-/* Card */
+/* Card - Search bar */
 #card {
-    max-width: 40%;
-    max-width: 600px;
+    width: 40%;
+    max-width: 500px;
     min-height: 300px; 
-    margin: 3.2rem auto;
+    margin: 4rem auto;
     border-radius: 4rem;
     padding: 4rem;
     background-image: linear-gradient(-180deg, #53b589 0%, #1697be 100%);
@@ -47,8 +47,6 @@ button {
     width: 100%;
 }
 #search-container button, #search-container input {
-    background-color: #ebfffc;
-    color: rgb(89, 89, 89);
     font-size: 1.6rem;
     height: 60px;
     border-radius: 32px;
@@ -59,27 +57,77 @@ button {
 }
 #search-container button {
     display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     gap: 0.4rem;
-    flex-grow: 1;
     font-weight: 500;
+    background-color: #2e8099;
+    color: white;
 }
 #search-container button:hover {
-    background-color: #b8d8d4;
+    background-color: #185669;
 }
 #search-container input {
     flex-grow: 2;
     font-family: "poppins";
     padding: 1rem 2.4rem;
+    background-color: #ebfffc;
+    color: rgb(89, 89, 89);
+}
+
+/* Card - main */
+#weather-container {
+    margin: 3.2rem auto;
+}
+.weather-icon {
+    width: 34%;
+}
+#weather-container h1 {
+    font-size: 8rem;
+    font-weight: 500;
+}
+#weather-container h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+/* Card - details */
+#weather-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.4rem;
+}
+#humidity, #wind {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 2rem;
+}
+#humidity img, #wind img {
+    width: 18%;
+}
+#humidity-title, #wind-title {
+    font-size: 2.6rem;
 }
 
 /* RESPONSIVE BREAKPOINTS */ 
 /* Tablettes et moyennes écrans */
 @media screen and (max-width: 992px){
-    
+    #card {
+        width: 70%;
+    }
+    #search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
 /* Portables et petits écrans */
 @media screen and (max-width: 576px){
-    
+    #card {
+        width: 90%;
+    }
 }
