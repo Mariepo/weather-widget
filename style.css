@@ -1,0 +1,34 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "poppins";
+    font-size: 1.6rem; /* 16px */
+}
+a {
+    all: unset;
+    cursor: pointer;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+ul {
+    list-style: none;
+}
+
+/* RESPONSIVE BREAKPOINTS */ 
+/* Tablettes et moyennes écrans */
+@media screen and (max-width: 992px){
+    
+}
+/* Portables et petits écrans */
+@media screen and (max-width: 576px){
+    
+}
