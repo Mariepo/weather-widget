@@ -13,6 +13,9 @@
 </head>
 <body>
     <main>
+        <video autoplay muted loop id="background-video">
+            <source src="./videos/clouds.mp4" type="video/mp4" id="background-video-weather">
+        </video>
         <div id="card">
             <div id="search-container">
                 <input type="text" placeholder="Your city" value="Lille">
@@ -51,6 +54,8 @@
         const searchbox = document.querySelector("#search-container input");
         const searchButton = document.querySelector("#search-container button");
         const weatherIcon = document.querySelector(".weather-icon");
+        const backgroundVideoTag = document.querySelector("#background-video")
+        const backgroundVideoSource = document.querySelector("#background-video-weather");
 
         async function checkWeather(city){
             const response = await fetch(apiURL + city + `&appid=${apiKey}`);
@@ -72,19 +77,29 @@
     
                 if(data.weather[0].main == "Clouds"){
                     weatherIcon.src = "./images/clouds.png"; 
-                    weatherIcon.alt = "Cloudy weather icon"; 
+                    weatherIcon.alt = "Cloudy weather icon";
+                    backgroundVideoSource.src = "./videos/clouds.mp4"; 
+                    backgroundVideoTag.load();
                 } else if(data.weather[0].main == "Clear"){
                     weatherIcon.src = "./images/clear.png" 
                     weatherIcon.alt = "Clear weather icon"; 
+                    backgroundVideoSource.src = "./videos/clear.mp4"; 
+                    backgroundVideoTag.load();
                 } else if(data.weather[0].main == "Rain"){
                     weatherIcon.src = "./images/rain.png" 
                     weatherIcon.alt = "Rainy weather icon"; 
+                    backgroundVideoSource.src = "./videos/rain.mp4"; 
+                    backgroundVideoTag.load();
                 } else if(data.weather[0].main == "Drizzle"){
                     weatherIcon.src = "./images/drizzle.png" 
                     weatherIcon.alt = "Drizzle weather icon"; 
+                    backgroundVideoSource.src = "./videos/drizzel.mp4"; 
+                    backgroundVideoTag.load();
                 } else if(data.weather[0].main == "Mist"){
                     weatherIcon.src = "./images/mist.png" 
                     weatherIcon.alt = "Misty weather icon"; 
+                    backgroundVideoSource.src = "./videos/mist.mp4"; 
+                    backgroundVideoTag.load();
                 }
                 document.querySelector(".error").style.display = "none";
             }
