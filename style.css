@@ -10,7 +10,7 @@ html {
 body {
     font-family: "poppins";
     font-size: 1.6rem; /* 16px */
-    background-color: rgb(33, 33, 33);
+    /* background-color: rgb(33, 33, 33); */
     color: white;
 }
 a {
@@ -28,16 +28,35 @@ button {
     cursor: pointer;
 }
 
+/* Page background */
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
+}
+
 /* Card - Search bar */
 #card {
     width: 40%;
     max-width: 500px;
     min-height: 300px; 
-    margin: 4rem auto;
+    height: fit-content;
+    margin: auto;
     border-radius: 4rem;
     padding: 4rem;
-    background-image: linear-gradient(-180deg, #53b589 0%, #1697be 100%);
+    background-image: linear-gradient(-180deg, #53b58987 0%, #1697bef2 80%);
     text-align: center;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 #search-container {
     display: flex;
@@ -86,7 +105,7 @@ button {
 }
 #weather-container h1 {
     font-size: 8rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 #weather-container h2 {
     font-size: 3rem;
@@ -106,13 +125,13 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2.4rem;
 }
 #humidity, #wind {
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: left;
-    gap: 2rem;
+    gap: 1.6rem;
 }
 #humidity img, #wind img {
     width: 18%;
